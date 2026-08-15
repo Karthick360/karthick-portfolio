@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthick Nathan K | Portfolio</title>
+    <meta name="description" content="Portfolio of Karthick Nathan K, B.Tech IT Student specializing in Artificial Intelligence and Prompt Engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">KN</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header id="hero" class="section hero-section">
+            <div class="hero-content">
+                <h1 class="animate-up">Karthick Nathan K</h1>
+                <h2 class="animate-up delay-1">B.Tech IT Student</h2>
+                <p class="tagline animate-up delay-2">Crafting AI solutions and generating engaging content through advanced prompt engineering.</p>
+                <div class="cta-buttons animate-up delay-3">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card glass">
+                <p>
+                    Motivated B.Tech IT student with a strong interest in Artificial Intelligence and prompt engineering. 
+                    Skilled in designing structured prompts, refining AI outputs, and generating engaging content. 
+                    Eager to apply creativity and problem-solving skills in real-world AI applications.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass">
+                    <h3>Computer Skills</h3>
+                    <ul class="tag-list">
+                        <li>Prompt Engineering</li>
+                        <li>AI Tools (ChatGPT & Basic AI tools)</li>
+                        <li>Basic Python programming</li>
+                        <li>HTML & CSS (Basics)</li>
+                        <li>Java (Basics)</li>
+                        <li>C & C++ (Basics)</li>
+                        <li>Content Writing</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass">
+                    <h3>Languages</h3>
+                    <ul class="tag-list">
+                        <li>Native (Tamil)</li>
+                        <li>English (Intermediate)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">AI Content Creation</h2>
+            <div class="experience-card glass">
+                <div class="experience-item">
+                    <h3>Content Generation</h3>
+                    <p>Created prompts for social media and content generation.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>AI Output Refinement</h3>
+                    <p>Generated engaging and relevant AI-Based content.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech - Information Technology</h3>
+                        <h4>NANDHA ENGINEERING COLLEGE</h4>
+                        <span class="timeline-date">2024 - 2028</span>
+                    </div>
+                </div>
+                <div class="timeline-item glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Higher Secondary</h3>
+                        <h4>JAYANTHI MATRIC HR SEC SCHOOL</h4>
+                        <span class="timeline-date">Completed in 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:8667277842">8667277842</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:kn9026157@gmail.com">kn9026157@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <address>
+                        1/535H8 Senthil nagar,<br>
+                        Arivoli nagar, Aarumuthampalayam,<br>
+                        Palladam, Tiruppur(dt)-641664
+                    </address>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Karthick Nathan K. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation script
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .timeline-item, .skill-category, .about-card, .experience-card').forEach((el) => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
